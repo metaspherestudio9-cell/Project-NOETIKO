@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software or framework, please cite it as below."
+authors:
+- family-names: "Kappe"
+  given-names: "André"
+  orcid: "https://orcid.org/0009-0001-2799-379X"
+title: "Project NOETIKO: In-Silico Validation Framework"
+version: 1.0.0
+date-released: 2025-12-23
+doi: 10.5281/zenodo.18020064
+url: "https://github.com/AndreKappe/project-noetiko"
