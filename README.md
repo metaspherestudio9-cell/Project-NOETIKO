@@ -1,4 +1,4 @@
-# Project NOETIKO: Computational Framework for 6-Dimensional Bio-Information Transfer
+# Project NOETIKO: 6-Dimensional Reality Engineering Framework
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18020064.svg)](https://doi.org/10.5281/zenodo.18020064)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
