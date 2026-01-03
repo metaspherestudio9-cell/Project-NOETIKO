@@ -14,6 +14,7 @@ This suite validates the core postulates of the NOETIKO Trilogy (Zenodo, 2025):
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
+import os
 
 # --- PHYSICAL CONSTANTS & CONFIGURATION ---
 HYDROGEN_FREQ = 1.4204e9  # 1.4204 GHz (Hydrogen Line)
@@ -30,12 +31,11 @@ def simulate_stochastic_resonance():
     print(f"--- Initiating Bio-Signal Injection at {HYDROGEN_FREQ/1e9} GHz ---")
     
     # Time domain setup (Scaled for visualization)
-    # Note: Real-time simulation of GHz requires ns resolution; here we model the envelope.
     t_points = 1000
     time = np.linspace(0, 50, t_points)
     
     # Signal Parameters
-    # The signal is intentionally weak (Sub-threshold)
+    # The signal is intentionally weak (Sub-threshold) to demonstrate resonance necessity
     signal_amp = 0.4 * KAPPA_THRESHOLD 
     carrier_wave = signal_amp * np.sin(time) # Representative of the 1.42 GHz envelope
     
@@ -43,7 +43,7 @@ def simulate_stochastic_resonance():
     noise_level = 1.8 
     thermal_noise = np.random.normal(0, noise_level * 0.4, t_points)
     
-    # System State
+    # System State: The sum of Signal + Noise
     combined_state = carrier_wave + thermal_noise
     
     # Detection: Finding Constructor Injection Events (Crossing Kappa)
@@ -57,7 +57,7 @@ def simulate_stochastic_resonance():
     plt.subplot(2, 1, 1)
     plt.plot(time, carrier_wave, color='#FFD700', label='RF Signal (1.42 GHz Information Carrier)')
     plt.axhline(y=KAPPA_THRESHOLD, color='red', linestyle='--', linewidth=2, label=f'Bio-Activation Threshold (Kappa={KAPPA_THRESHOLD})')
-    plt.fill_between(time, -2, 2, color='#001a33', alpha=0.1) # Background
+    plt.fill_between(time, -2, 2, color='#001a33', alpha=0.1) # Background styling
     plt.title('Scenario A: Pure Signal (Sub-Threshold) -> No Biological Effect', fontsize=12)
     plt.ylabel('Potential (eV)')
     plt.grid(True, alpha=0.3)
@@ -78,8 +78,13 @@ def simulate_stochastic_resonance():
     plt.legend(loc='upper right')
     
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    plt.savefig('results/Fig1_Stochastic_Resonance_Validation.png') # Saving to results folder
-    print(f"simulation_sr: Success. Generated {len(peaks)} events. Image saved.")
+    
+    # Ensure results directory exists
+    if not os.path.exists('results'):
+        os.makedirs('results')
+        
+    plt.savefig('results/Fig1_Stochastic_Resonance_Validation.png')
+    print(f"simulation_sr: Success. Generated {len(peaks)} events. Image saved to results/.")
 
 def simulate_vector_potential():
     """
@@ -108,7 +113,7 @@ def simulate_vector_potential():
     current_I = 1.0 
     wires = [
         (0.5, 0.5, 1),   # Wire A (Out)
-        (0.6, 0.5, -1),  # Wire A' (In) - Close proximity for B-cancellation
+        (0.6, 0.5, -1),  # Wire A' (In)
         (-0.5, 0.5, 1),  # Wire B (Out)
         (-0.6, 0.5, -1)  # Wire B' (In)
     ]
@@ -133,14 +138,13 @@ def simulate_vector_potential():
     plt.title('Bifilar Möbius Topology: A-Field Distribution (Zero-B Mode)', fontsize=14)
     plt.xlabel('Spatial Coordinate X (micrometers)')
     plt.ylabel('Spatial Coordinate Y (micrometers)')
-    plt.grid(False)
     
+    if not os.path.exists('results'):
+        os.makedirs('results')
+
     plt.savefig('results/Fig2_Bifilar_Topology_A_Field.png')
-    print("simulation_topology: Success. A-Field map generated. Image saved.")
+    print("simulation_topology: Success. A-Field map generated. Image saved to results/.")
 
 if __name__ == "__main__":
-    # Ensure results directory exists logic could go here, 
-    # but for this script we assume structure is ready.
     simulate_stochastic_resonance()
     simulate_vector_potential()
-
