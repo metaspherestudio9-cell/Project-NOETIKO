@@ -57,7 +57,7 @@ def simulate_stochastic_resonance():
     plt.subplot(2, 1, 1)
     plt.plot(time, carrier_wave, color='#FFD700', label='RF Signal (1.42 GHz Information Carrier)')
     plt.axhline(y=KAPPA_THRESHOLD, color='red', linestyle='--', linewidth=2, label=f'Bio-Activation Threshold (Kappa={KAPPA_THRESHOLD})')
-    plt.fill_between(time, -2, 2, color='#001a33', alpha=0.1) # Background styling
+    plt.fill_between(time, -2, 2, color='#001a33', alpha=0.1) 
     plt.title('Scenario A: Pure Signal (Sub-Threshold) -> No Biological Effect', fontsize=12)
     plt.ylabel('Potential (eV)')
     plt.grid(True, alpha=0.3)
@@ -109,7 +109,6 @@ def simulate_vector_potential():
     X, Y = np.meshgrid(x, y)
     
     # Bifilar Coil Geometry (Cross-section view)
-    # Current I runs in opposite directions (+1 vs -1) to cancel B-field
     current_I = 1.0 
     wires = [
         (0.5, 0.5, 1),   # Wire A (Out)
@@ -125,7 +124,6 @@ def simulate_vector_potential():
         
     # --- VISUALIZATION ---
     plt.figure(figsize=(10, 8))
-    # Using 'inferno' to visualize energy density
     contour = plt.contourf(X, Y, A_total, levels=60, cmap='inferno')
     cbar = plt.colorbar(contour)
     cbar.set_label('Vector Potential Magnitude |A|', rotation=270, labelpad=20)
