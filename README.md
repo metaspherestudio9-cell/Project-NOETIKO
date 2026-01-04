@@ -1,7 +1,7 @@
-# Project NOETIKO: 6-Dimensional Reality Engineering Framework
+# Project NOETIKO: Bio-Physical Simulation Framework
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Release](https://img.shields.io/badge/Release-v1.0.0-blue)
 ![Science](https://img.shields.io/badge/Focus-Bio--Physics-green)
 
 **Official Validation Repository for the NOETIKO Trilogy (Zenodo, 2025).**
@@ -33,9 +33,13 @@ The following visualizations are generated directly by the `noetiko_simulation_s
 *Demonstrating the "Constructor Injection" mechanism where thermal noise amplifies the 1.42 GHz signal.*
 ![Stochastic Resonance](./results/Fig1_Stochastic_Resonance_Validation.png)
 
-### Figure 2: Vector Potential Topology
+### Figure 2: Vector Potential Topology (2D Analysis)
 *Heatmap of the $\vec{A}$-field distribution in the zero-magnetic-field zone of the bifilar coil.*
 ![Vector Potential](./results/Fig2_Bifilar_Topology_A_Field.png)
+
+### Figure 3: 3D Toroidal Manifold
+*Visualization of the Bifilar Winding Geometry on the Toroidal Manifold, validating the spatial requirements for the A-Field topology.*
+![3D Torus](./results/Fig3_3D_Torus_Geometry.png)
 
 ---
 
@@ -60,3 +64,4 @@ pip install -r requirements.txt
 
 # Run the simulation suite
 python simulations/noetiko_simulation_suite.py
+
