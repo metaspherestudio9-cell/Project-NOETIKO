@@ -1,48 +1,62 @@
 # Project NOETIKO: 6-Dimensional Reality Engineering Framework
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18020064.svg)](https://doi.org/10.5281/zenodo.18020064)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Scientific Field](https://img.shields.io/badge/Field-Quantum_Biophysics-blue)](https://noetiko.org)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Science](https://img.shields.io/badge/Focus-Bio--Physics-green)
 
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?logo=python)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-validation%20complete-success)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18020064.svg)](https://doi.org/10.5281/zenodo.18020064)
+**Official Validation Repository for the NOETIKO Trilogy (Zenodo, 2025).**
 
-## Overview
-**Project NOETIKO** investigates the intersection of high-dimensional field theory and non-thermal biological regulation. This repository contains the *in-silico* validation scripts for the theoretical models published in our recent trilogy (Zenodo, 2025).
+## 1. Project Overview
+Project NOETIKO investigates the intersection of **High-Dimensional Field Theory** and **Biological Regulation**. This repository contains the numerical simulation suite used to validate the core postulates of the NOETIKO framework:
 
-**Principal Investigator:** André Kappe (ORCID: [0009-0001-2799-379X](https://orcid.org/0009-0001-2799-379X))
+1.  **Stochastic Resonance at 1.42 GHz:** Utilizing thermal noise ($k_B T$) to bridge the biological activation energy threshold ($\kappa \approx 1.0 \, \text{eV}$).
+2.  **Vector Potential Topology:** Modeling the magnetic vector potential ($\vec{A}$) in bifilar Möbius-Toroid geometries where the magnetic field is canceled ($\vec{B} \approx 0$).
 
-## Key Concepts Validated
-This repository provides numerical proofs for two core postulates of the NOETIKO framework:
+---
 
-1.  **Stochastic Resonance in Bio-Signaling:**
-    Demonstrating how sub-threshold RF signals (1.42 GHz) utilize thermal noise ($k_B T$) to overcome the biological activation barrier ($\kappa \approx 1.0 \text{ eV}$). This resolves the thermodynamic paradox of weak-field interaction.
+## 2. Key Scientific Concepts
 
-2.  **Vector Potential Topologies:**
-    Simulating the magnetic vector potential ($\mathbf{A}$-field) distribution in a bifilar Möbius-Toroid configuration where the magnetic field $\mathbf{B} \approx 0$.
+### The Thermodynamic Solution
+Biological systems operate in a thermal noise bath. Standard RF signals often fail to trigger bio-effects because they are below the activation threshold.
+NOETIKO utilizes **Stochastic Resonance**, where the hydrogen line frequency ($f_H = 1420.4 \, \text{MHz}$) is phase-locked with thermal noise to push information packets over the $\kappa$-barrier.
 
-## Repository Structure
-* `/simulations`: Python scripts for Stochastic Resonance and Field Topology.
-* `/results`: Generated validation plots and visual data.
-* `/docs`: References to the theoretical papers.
+### The Topological Interface
+Information transfer is modeled not through amplitude modulation, but through topological phase shifts (Aharonov-Bohm effect) in the vector potential field, created by a specific **Bifilar Möbius Coil** design.
 
-## Getting Started
-You can run these simulations directly in your browser via Google Colab:
-[Run in Google Colab](https://colab.research.google.com/) (Copy the script content into a new notebook).
+---
 
-## Citation
-If you use this code or the theoretical framework, please cite the foundational trilogy:
-> Kappe, A. (2025). *The NOETIKO Trilogy: Multidimensional Information Transfer in Biological Systems*. Zenodo. DOI: 10.5281/zenodo.18020064
+## 3. Validation Results
 
-## Simulation Constraints & Model Limitations
-The current `noetiko_simulation_suite.py` utilizes specific approximations for computational efficiency:
-* **A-Field Topology:** The Bifilar Möbius model uses a **2D cross-section approximation** of the vector potential ($\vec{A}$). The logarithmic potential formula (`-I * ln(r)`) assumes infinite wire length perpendicular to the plane, which is sufficient for demonstrating the *topology* of the zero-B-field zone but does not represent the full 3D toroidal curvature.
-* **Signal Envelope:** The 1.42 GHz signal is modeled via its modulation envelope to visualize the *mechanism* of Stochastic Resonance without requiring nanosecond-resolution sampling of the carrier wave.
+The following visualizations are generated directly by the `noetiko_simulation_suite.py` contained in this repository.
 
-Future releases (v2.x) will implement full 3D Biot-Savart integration.
+### Figure 1: Stochastic Resonance Validation
+*Demonstrating the "Constructor Injection" mechanism where thermal noise amplifies the 1.42 GHz signal.*
+![Stochastic Resonance](./results/Fig1_Stochastic_Resonance_Validation.png)
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Figure 2: Vector Potential Topology
+*Heatmap of the $\vec{A}$-field distribution in the zero-magnetic-field zone of the bifilar coil.*
+![Vector Potential](./results/Fig2_Bifilar_Topology_A_Field.png)
 
+---
+
+## 4. Getting Started
+
+### Prerequisites
+* Python 3.8+
+* Libraries: `numpy`, `matplotlib`, `scipy`
+
+### Installation & Execution
+You can reproduce these results locally or via Google Colab.
+
+```bash
+# Clone the repository
+git clone [https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git)
+
+# Navigate to the directory
+cd Project-NOETIKO
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the simulation suite
+python simulations/noetiko_simulation_suite.py
