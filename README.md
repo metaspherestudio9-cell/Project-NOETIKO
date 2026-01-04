@@ -44,13 +44,13 @@ The simulation suite generates reproducible visual artifacts validating the core
 ---
 
 ## 4. Technical Architecture
-The codebase is structured for high assurance and reproducibility:
+* [**`simulations/noetiko_simulation_suite.py`**](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/simulations/noetiko_simulation_suite.py): Core logic for SR and Topology generation.
+* [**`simulations/noetiko_gpu_core.py`**](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/simulations/noetiko_gpu_core.py): PyTorch-accelerated module for high-dimensional tensor computations.
+* [**`tests/test_noetiko_physics.py`**](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/tests/test_noetiko_physics.py): Unit tests verifying physical constants and geometric integrity.
+* [**`tests/validation_qutip_benchmark.py`**](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/tests/validation_qutip_benchmark.py): External validation against the **QuTiP** standard.
+* [**`.github/workflows/noetiko_ci.yml`**](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/.github/workflows/noetiko_ci.yml): CI/CD Pipeline ensuring physics compliance.
+* [**`SECURITY.md`**](https://github.com/Andre-Kappe-Noetiko/Project-NOETIKO/blob/main/SECURITY.md): Institutional security and vulnerability disclosure policy.
 
-* **`simulations/noetiko_simulation_suite.py`**: Core logic for SR and Topology generation.
-* **`simulations/noetiko_gpu_core.py`**: **NEW** - PyTorch-accelerated module for high-dimensional tensor computations.
-* **`tests/test_noetiko_physics.py`**: Unit tests verifying physical constants ($k_B$, $f_H$) and geometric integrity.
-* **`tests/validation_qutip_benchmark.py`**: **NEW** - External validation against the **QuTiP** (Quantum Toolbox in Python) standard.
-* **`.github/workflows/noetiko_ci.yml`**: CI/CD Pipeline ensuring physics compliance on every commit.
 
 ---
 
