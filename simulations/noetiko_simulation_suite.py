@@ -143,6 +143,59 @@ def simulate_vector_potential():
     plt.savefig('results/Fig2_Bifilar_Topology_A_Field.png')
     print("simulation_topology: Success. A-Field map generated. Image saved to results/.")
 
+def simulate_3d_torus_topology():
+    """
+    Generates a 3D visualization of the Bifilar Möbius Toroid geometry.
+    This validates the spatial manifold requirement for the A-Field topology.
+    """
+    print("--- Generating 3D Toroidal Manifold ---")
+    
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection='3d')
+    
+    # Torus Parameters
+    R = 4  # Major radius
+    r = 1  # Minor radius
+    
+    # Grid generation
+    theta = np.linspace(0, 2 * np.pi, 50)
+    phi = np.linspace(0, 2 * np.pi, 50)
+    theta, phi = np.meshgrid(theta, phi)
+    
+    # Parametric equations for Torus
+    x = (R + r * np.cos(theta)) * np.cos(phi)
+    y = (R + r * np.cos(theta)) * np.sin(phi)
+    z = r * np.sin(theta)
+    
+    # Plot Surface (Wireframe style for scientific look)
+    ax.plot_wireframe(x, y, z, color='#003366', alpha=0.3, rstride=5, cstride=5)
+    
+    # Simulate Bifilar Winding Path (Gold Trace)
+    # 12 windings around the torus
+    t = np.linspace(0, 2 * np.pi, 200)
+    windings = 12
+    # Logic: phi moves fast (windings), theta moves slow (loop around major radius)
+    x_wire = (R + (r+0.1) * np.cos(windings*t)) * np.cos(t)
+    y_wire = (R + (r+0.1) * np.cos(windings*t)) * np.sin(t)
+    z_wire = (r+0.1) * np.sin(windings*t)
+    
+    ax.plot(x_wire, y_wire, z_wire, color='gold', linewidth=2, label='Bifilar Gold Trace (Skin Effect optimized)')
+    
+    # Styling
+    ax.set_title("3D Bifilar Möbius Toroid Geometry", fontsize=14)
+    ax.set_xlabel('X [mm]')
+    ax.set_ylabel('Y [mm]')
+    ax.set_zlabel('Z [mm]')
+    ax.legend()
+    
+    if not os.path.exists('results'):
+        os.makedirs('results')
+    
+    plt.savefig('results/Fig3_3D_Torus_Geometry.png', dpi=300)
+    print("simulation_3d: Success. 3D Manifold generated. Image saved.")
+
 if __name__ == "__main__":
     simulate_stochastic_resonance()
     simulate_vector_potential()
+    simulate_3d_torus_topology() # Neu hinzugefügt
+
