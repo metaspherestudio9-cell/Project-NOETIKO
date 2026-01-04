@@ -4,6 +4,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Scientific Field](https://img.shields.io/badge/Field-Quantum_Biophysics-blue)](https://noetiko.org)
 
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?logo=python)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-validation%20complete-success)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18020064.svg)](https://doi.org/10.5281/zenodo.18020064)
+
 ## Overview
 **Project NOETIKO** investigates the intersection of high-dimensional field theory and non-thermal biological regulation. This repository contains the *in-silico* validation scripts for the theoretical models published in our recent trilogy (Zenodo, 2025).
 
