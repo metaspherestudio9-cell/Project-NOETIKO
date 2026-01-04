@@ -36,6 +36,13 @@ You can run these simulations directly in your browser via Google Colab:
 If you use this code or the theoretical framework, please cite the foundational trilogy:
 > Kappe, A. (2025). *The NOETIKO Trilogy: Multidimensional Information Transfer in Biological Systems*. Zenodo. DOI: 10.5281/zenodo.18020064
 
+## Simulation Constraints & Model Limitations
+The current `noetiko_simulation_suite.py` utilizes specific approximations for computational efficiency:
+* **A-Field Topology:** The Bifilar Möbius model uses a **2D cross-section approximation** of the vector potential ($\vec{A}$). The logarithmic potential formula (`-I * ln(r)`) assumes infinite wire length perpendicular to the plane, which is sufficient for demonstrating the *topology* of the zero-B-field zone but does not represent the full 3D toroidal curvature.
+* **Signal Envelope:** The 1.42 GHz signal is modeled via its modulation envelope to visualize the *mechanism* of Stochastic Resonance without requiring nanosecond-resolution sampling of the carrier wave.
+
+Future releases (v2.x) will implement full 3D Biot-Savart integration.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
