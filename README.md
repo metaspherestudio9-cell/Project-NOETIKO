@@ -65,3 +65,4 @@ pip install -r requirements.txt
 # Run the simulation suite
 python simulations/noetiko_simulation_suite.py
 
+* **Visualization Engine:** We deliberately utilize `matplotlib` over higher-end engines like `Mayavi` or `ParaView` to ensure maximum portability and seamless execution in cloud environments (Google Colab / GitHub Actions) without complex dependency overhead.
