@@ -19,3 +19,11 @@ The NOETIKO Project is built upon the theoretical framework established in the f
 **Title:** *The NOETIKO Trilogy: Multidimensional Information Transfer in Biological Systems - Part 3: Validation*
 * **Focus:** Stochastic Resonance Integration, High-Dimensional Field Theory, Solving the Thermodynamic Paradox.
 * **DOI:** [10.5281/zenodo.18020064](https://doi.org/10.5281/zenodo.18020064)
+
+---
+
+## External Validation Concepts
+This framework utilizes established physical concepts:
+1.  **Stochastic Resonance:** Utilizing thermal noise ($k_B T$) to amplify sub-threshold signals.
+2.  **Aharonov-Bohm Effect:** Potential-driven phenomena in regions where magnetic field $B=0$.
+3.  **Hydrogen Line (21cm):** Universal resonance frequency at 1.42 GHz.
