@@ -1,5 +1,4 @@
-fastapi==0.109.0
-uvicorn==0.27.0
-pydantic==2.5.3
 numpy
-torch --index-url https://download.pytorch.org/whl/cpu
+torch
+qutip
+matplotlib
