@@ -5,19 +5,15 @@
 NOETIKO RESONANCE ENGINE [CORE MODULE]
 Version: 2.1 (Production)
 Copyright (c) 2026 NOETIKO Research Division. All Rights Reserved.
+Founder: André Kappe (ORCID: 0009-0001-2799-379X)
 
-Founder: André Kappe
-ORCID: 0009-0001-2799-379X
-Contact: andre.kappe@noetiko.tech
-Location: Cologne, NRW
-
-NOTICE: 
-This code is proprietary property of NOETIKO. 
-It is published for transparency and scientific audit purposes only.
-Unauthorized commercial use, modification, or distribution is strictly prohibited.
+DESCRIPTION:
+Calculates physical parameters for the Bifilar Möbius Emitter to achieve 
+resonance with the Hydrogen Hyperfine Transition line (1.42 GHz).
 """
 
 import math
+import sys
 
 class NoetikoResonator:
     def __init__(self):
@@ -30,19 +26,23 @@ class NoetikoResonator:
         self.f_target = 1.420405751e9  # Hydrogen Line (Hz)
 
     def calculate_parameters(self):
-        """Calculates precise wire lengths and skin depth."""
-        lambda_0 = self.c / self.f_target
-        
-        # Skin depth calculation
-        omega = 2 * math.pi * self.f_target
-        delta = math.sqrt((2 * self.rho_copper) / (omega * self.mu_0))
-        
-        return {
-            "lambda_cm": lambda_0 * 100,
-            "target_2lambda_cm": (lambda_0 * 2) * 100,
-            "target_4lambda_cm": (lambda_0 * 4) * 100,
-            "skin_depth_um": delta * 1e6
-        }
+        """Calculates precise wire lengths and skin depth with error handling."""
+        try:
+            if self.f_target <= 0:
+                raise ValueError("Frequency must be positive.")
+                
+            lambda_0 = self.c / self.f_target
+            omega = 2 * math.pi * self.f_target
+            delta = math.sqrt((2 * self.rho_copper) / (omega * self.mu_0))
+            
+            return {
+                "lambda_cm": lambda_0 * 100,
+                "target_2lambda_cm": (lambda_0 * 2) * 100,
+                "skin_depth_um": delta * 1e6
+            }
+        except Exception as e:
+            print(f"Calculation Error: {e}")
+            sys.exit(1)
 
     def run_audit(self):
         data = self.calculate_parameters()
