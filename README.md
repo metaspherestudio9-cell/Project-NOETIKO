@@ -1,46 +1,46 @@
 # NOETIKO: Bio-Physical Simulation Framework
+
 ### Stochastic Resonance & Vector Potential Topology in Biological Systems
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![License](https://img.shields.io/badge/license-Proprietary%20Audit-red)
-![Status](https://img.shields.io/badge/status-scientific%20validation-orange)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Andre-Kappe-NOETIKO/Project-NOETIKO/noetiko_ci.yml?style=flat-square)](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/actions)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/Andre-Kappe-NOETIKO/Project-NOETIKO?style=flat-square)](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/LICENSE)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO/blob/main/CONTRIBUTING.md)
 
-**Official Validation Framework for the NOETIKO Trilogy.**
-
-* **Founder:** André Kappe ([ORCID: 0009-0001-2799-379X](https://orcid.org/0009-0001-2799-379X))
-* **Zenodo Records:** [17995177](https://zenodo.org/record/17995177), [17996335](https://zenodo.org/record/17996335), [18020064](https://zenodo.org/record/18020064)
-* **Contact:** andre.kappe@noetiko.tech
-* **Location:** Cologne, NRW
-
----
+Official Validation Framework for the NOETIKO Trilogy.
 
 ## 📡 Abstract
-NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This framework validates the physical parameters required for the **Bifilar Möbius Emitter** to achieve resonance coupling with the Hydrogen Line ($H_1$) via the Vector Potential (Potential-Field).
+
+NOETIKO is a research initiative operationalizing the 1.42 GHz Hydrogen Hyperfine Transition for biological entropy reduction. This framework validates the physical parameters required for the Bifilar Möbius Emitter to achieve resonance coupling with the Hydrogen Line via the Vector Potential (A-Field).
+
+> "Biology is not controlled by Energy. It is controlled by Information."
 
 ## 🧬 Wellness Applications & Context
-Focus on **Information Hygiene** and **Entropy Reduction** for biological systems.
-* **Coherence Optimization:** Minimizing thermodynamic noise in cellular signaling.
-* **Signal Processing:** Treating the organism as a high-fidelity receiver via the Vector Potential ($A$-Field).
 
-## 📂 Repository Structure & Documentation
+While this framework is rooted in rigorous physics, its primary application is in the field of **Information Hygiene** and **Entropy Reduction** for biological systems.
 
-### Core Components
-* `resonance_calc.py`: Precise wire length & skin-depth calculations for the Artifact_01.
-* `noetiko_simulation_suite.py`: Stochastic resonance modeling for biological systems.
-* `/docs/PROJECT_HISTORY.md`: Archive of research evolution and legacy notes.
+* **Coherence Optimization:** Simulating how specific frequencies (1.42 GHz) can minimize thermodynamic noise in cellular signaling.
+* **Signal Processing:** Treating the biological organism as a high-fidelity receiver that requires calibration via the Vector Potential (A-Field).
 
----
+## 📂 Repository Structure
 
-## 🚀 Quick Start Example
-To audit the resonance parameters (wavelength and skin depth) for the 1.42 GHz emitter, run:
+### `/simulations`
+- `resonance_calc.py`: Precise wire length & skin-depth calculations.
+- `noetiko_simulation_suite.py`: Stochastic resonance modeling.
 
-```bash
-# Clone the repository
-git clone [https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git)
+### `/docs`
+- `PROJECT_HISTORY.md`: Archive of research evolution.
+- `TUTORIAL.md`: Step-by-step guide for users.
 
-# Navigate to the folder
-cd Project-NOETIKO
+### `/results`
+- Visualization outputs (e.g., heatmaps, torus geometry).
 
-# Run the validation engine
-python3 resonance_calc.py
+### `/tests`
+- Unit tests and benchmarks (e.g., QuTiP for quantum validation).
+
+### `/src`
+- `main_api.py`: Entry point for core API functions.
+
+## 🚀 Getting Started
+
+### Installation
