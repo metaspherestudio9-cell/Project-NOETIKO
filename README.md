@@ -1,37 +1,45 @@
-# NOETIKO: Reality Engineering Framework
+# NOETIKO: Bio-Physical Simulation Framework
+### Stochastic Resonance & Vector Potential Topology in Biological Systems
 
-![System Status](https://img.shields.io/badge/System-Operational-brightgreen) ![Physics Audit](https://img.shields.io/badge/Physics-Validated-blue) ![IP Status](https://img.shields.io/badge/IP-Proprietary-red)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-Proprietary%20Audit-red)
+![Status](https://img.shields.io/badge/status-scientific%20validation-orange)
 
-## 📡 Abstract
-NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This repository contains the core calculations for the **Artifact_01 (Bifilar Emitter)** to prove technical feasibility.
+**Official Validation Framework for the NOETIKO Trilogy.**
+This repository contains the core mathematical simulations and validation scripts for the **Genesis Protocol** and **Artifact_01**, focusing on the 1.42 GHz Hydrogen Line interaction.
 
 > "Biology is not controlled by Energy. It is controlled by Information."
+
+## 📡 Abstract
+NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This framework validates the physical parameters required for the **Bifilar Möbius Emitter** to achieve resonance coupling with the Hydrogen Line ($H_1$).
+
+## 🧬 Wellness Applications & Context
+While this framework is rooted in rigorous physics, its primary application is in the field of **Information Hygiene** and **Entropy Reduction** for biological systems.
+
+* **Coherence Optimization:** Simulating how specific frequencies (1.42 GHz) can minimize thermodynamic noise in cellular signaling.
+* **Signal Processing:** Treating the biological organism as a high-fidelity receiver that requires calibration via the Vector Potential ($A$-Field).
 
 ## 📂 Repository Structure
 
 ### `/research`
-Contains the core physics engine.
+Contains the core physics engine and validation scripts.
 - **`resonance_calc.py`**: Python module determining the exact wire lengths and skin-depth parameters for 1.42 GHz resonance coupling.
+- **`noetiko_simulation_suite.py`**: Stochastic resonance modeling.
 
 ### `/docs`
-Documentation and legacy project notes.
-- **`PROJECT_HISTORY.md`**: Archive of previous project states and internal notes.
+Technical specifications and whitepapers regarding the **Dimensional Delimitation** framework (based on Burkhard Heim's Extended Field Theory).
 
-## 🚀 Technical Validation
+## 🚀 Getting Started
+
 To audit the resonance parameters:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/YOUR-USERNAME/noetiko-core.git](https://github.com/YOUR-USERNAME/noetiko-core.git)
+git clone [https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git)
 
-# Run the simulation engine
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the resonance audit
 python3 research/resonance_calc.py
-## ⚠️ Disclaimer & IP Notice
-**Copyright (c) 2026 NOETIKO Research Division.**
-
-This code is proprietary. It is published for transparency and audit purposes only.
-- **Not for Medical Use:** This is not a medical device under the EU MDR.
-- **Commercial Use:** Strictly prohibited without a license.
-
----
-© 2026 NOETIKO Research Division. North Rhine-Westphalia.
