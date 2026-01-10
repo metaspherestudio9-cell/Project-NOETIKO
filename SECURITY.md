@@ -2,17 +2,21 @@
 
 ## Supported Versions
 
+Currently, we only support the latest main branch for security updates.
+
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.1.x   | :white_check_mark: |
-| 1.0.x   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-Project NOETIKO is a scientific simulation framework. While it does not handle sensitive user data, we take code integrity seriously.
+If you discover a security vulnerability within the NOETIKO Simulation Framework, please do not disclose it publicly.
 
-If you discover a vulnerability (e.g., in the PyTorch tensor implementation or input validation), please report it via:
-* **Email:** [Dein-Kontakt-Email-oder-Issue-Tracker]
-* **GitHub Issues:** Open an issue with the tag `security`.
+1.  Email details to: **andre.kappe@noetiko.tech** (or your primary email).
+2.  Or open a private advisory on GitHub: [Andre-Kappe-NOETIKO Profile](https://github.com/Andre-Kappe-NOETIKO)
 
-We aim to acknowledge reports within 48 hours.
+We will respond within 48 hours.
+
+## IP & Integrity
+This code is for audit purposes. Any attempt to reverse-engineer proprietary algorithms for commercial forks is monitored.
