@@ -28,6 +28,9 @@ Focus on **Information Hygiene** and **Entropy Reduction** for biological system
 * `resonance_calc.py`: Precise wire length & skin-depth calculations.
 * `noetiko_simulation_suite.py`: Stochastic resonance modeling.
 
+### `/src`
+* `main_api.py`: Entry point for the simulation framework.
+
 ### `/docs`
 * `PROJECT_HISTORY.md`: Archive of research evolution.
 * `TUTORIAL.md`: Step-by-step guide for users.
