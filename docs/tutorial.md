@@ -1,8 +1,4 @@
 # NOETIKO Tutorial
-
-## Simulation Basics
-1. Run `python3 simulations/resonance_calc.py`.
-2. Observe the `Skin Depth` output. For 1.42 GHz, this must be precisely calibrated to the material's conductivity.
-
-## Visualizing Results
-Check the `/results` folder for generated TORUS geometry heatmaps after running the full simulation suite.
+1. Install dependencies via `pip install -r requirements.txt`.
+2. Run `python3 simulations/resonance_calc.py` to verify emitter lengths.
+3. Use `main_api.py` in the `/src` folder to integrate simulations into your own research workflow.
