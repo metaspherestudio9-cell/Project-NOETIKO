@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-Proprietary%20Audit-red)
-![Status](https://img.shields.io/badge/status-scientific%20validation-orange)
+![Contributions](https://img.shields.io/badge/contributions-welcome-orange)
 
 **Official Validation Framework for the NOETIKO Trilogy.**
 
@@ -18,28 +18,24 @@
 NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This framework validates the physical parameters required for the **Bifilar Möbius Emitter** to achieve resonance coupling with the Hydrogen Line ($H_1$) via the Vector Potential (**Potential**-Field).
 
 ## 🧬 Wellness Applications & Context
-While rooted in rigorous physics, the application focuses on **Information Hygiene** and **Entropy Reduction** for biological systems.
-
+Focus on **Information Hygiene** and **Entropy Reduction** for biological systems.
 * **Coherence Optimization:** Minimizing thermodynamic noise in cellular signaling.
 * **Signal Processing:** Treating the organism as a high-fidelity receiver via the Vector Potential ($A$-Field).
 
 ## 📂 Repository Structure
 
 ### `/simulations`
-Core physics engine and validation scripts.
 * `resonance_calc.py`: Precise wire length & skin-depth calculations.
 * `noetiko_simulation_suite.py`: Stochastic resonance modeling.
 
 ### `/docs`
-Technical specifications and the **Dimensional Delimitation** framework.
-* `PROJECT_HISTORY.md`: Archive of legacy notes and research evolution.
+* `PROJECT_HISTORY.md`: Archive of research evolution.
+* `TUTORIAL.md`: Step-by-step guide for users.
 
 ## 🚀 Getting Started
 
-To audit the resonance parameters, run the following commands in your terminal:
-
+### Installation
 ```bash
 git clone [https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git)
 cd Project-NOETIKO
 pip install -r requirements.txt
-python3 simulations/resonance_calc.py
