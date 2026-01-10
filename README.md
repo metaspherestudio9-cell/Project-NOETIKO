@@ -7,39 +7,39 @@
 ![Status](https://img.shields.io/badge/status-scientific%20validation-orange)
 
 **Official Validation Framework for the NOETIKO Trilogy.**
-This repository contains the core mathematical simulations and validation scripts for the **Genesis Protocol** and **Artifact_01**, focusing on the 1.42 GHz Hydrogen Line interaction.
 
-> "Biology is not controlled by Energy. It is controlled by Information."
+* **Founder:** André Kappe ([ORCID: 0009-0001-2799-379X](https://orcid.org/0009-0001-2799-379X))
+* **Zenodo Records:** [17995177](https://zenodo.org/record/17995177), [17996335](https://zenodo.org/record/17996335), [18020064](https://zenodo.org/record/18020064)
+* **Contact:** andre.kappe@noetiko.tech
+
+---
 
 ## 📡 Abstract
-NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This framework validates the physical parameters required for the **Bifilar Möbius Emitter** to achieve resonance coupling with the Hydrogen Line ($H_1$).
+NOETIKO is a research initiative operationalizing the **1.42 GHz Hydrogen Hyperfine Transition** for biological entropy reduction. This framework validates the physical parameters required for the **Bifilar Möbius Emitter** to achieve resonance coupling with the Hydrogen Line ($H_1$) via the Vector Potential (**Potential**-Field).
 
 ## 🧬 Wellness Applications & Context
-While this framework is rooted in rigorous physics, its primary application is in the field of **Information Hygiene** and **Entropy Reduction** for biological systems.
+While rooted in rigorous physics, the application focuses on **Information Hygiene** and **Entropy Reduction** for biological systems.
 
-* **Coherence Optimization:** Simulating how specific frequencies (1.42 GHz) can minimize thermodynamic noise in cellular signaling.
-* **Signal Processing:** Treating the biological organism as a high-fidelity receiver that requires calibration via the Vector Potential ($A$-Field).
+* **Coherence Optimization:** Minimizing thermodynamic noise in cellular signaling.
+* **Signal Processing:** Treating the organism as a high-fidelity receiver via the Vector Potential ($A$-Field).
 
 ## 📂 Repository Structure
 
-### `/research`
-Contains the core physics engine and validation scripts.
-- **`resonance_calc.py`**: Python module determining the exact wire lengths and skin-depth parameters for 1.42 GHz resonance coupling.
-- **`noetiko_simulation_suite.py`**: Stochastic resonance modeling.
+### `/simulations`
+Core physics engine and validation scripts.
+* `resonance_calc.py`: Precise wire length & skin-depth calculations.
+* `noetiko_simulation_suite.py`: Stochastic resonance modeling.
 
 ### `/docs`
-Technical specifications and whitepapers regarding the **Dimensional Delimitation** framework (based on Burkhard Heim's Extended Field Theory).
+Technical specifications and the **Dimensional Delimitation** framework.
+* `PROJECT_HISTORY.md`: Archive of legacy notes and research evolution.
 
 ## 🚀 Getting Started
 
-To audit the resonance parameters:
+To audit the resonance parameters, run the following commands in your terminal:
 
 ```bash
-# Clone the repository
 git clone [https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git](https://github.com/Andre-Kappe-NOETIKO/Project-NOETIKO.git)
-
-# Install dependencies
+cd Project-NOETIKO
 pip install -r requirements.txt
-
-# Run the resonance audit
-python3 research/resonance_calc.py
+python3 simulations/resonance_calc.py
